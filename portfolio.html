@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/WebStudio.svg"
+      type="image/x-icon"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Шапка сайту -->
+    <header class="header">
+      <div class="container header-container">
+        <nav class="navigation">
+          <a href="index.html" lang="en" class="logo">
+            Web<span class="header-logo">Studio</span></a
+          >
+          <ul class="list list-navigation">
+            <li class="list-navigation-item">
+              <a class="list-navigation-link" href="./index.html">Студія</a>
+            </li>
+            <li class="list-navigation-item">
+              <a class="list-navigation-link current" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="list-navigation-item">
+              <a class="list-navigation-link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="list list-contacts">
+          <li class="list-contacts-item">
+            <a class="list-contacts-link" href="mailto:info@devstudio.com">
+              <svg class="link-ico" width="16px" height="12px">
+                <use href="./images/svg-labels/icons.svg#icon-envelope"></use>
+              </svg>
+              <p>info@devstudio.com</p></a
+            >
+          </li>
+          <li class="list-contacts-item">
+            <a class="list-contacts-link" href="tel:+380961111111">
+              <svg class="link-ico" width="10px" height="16px">
+                <use href="./images/svg-labels/icons.svg#icon-smartphone"></use>
+              </svg>
+              <p>+38 096 111 11 11</p></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Основний контент -->
+    <main>
+      <section class="section portfolio-content">
+        <div class="container">
+          <!-- Список кнопок фільтрації -->
+          <ul class="list filtration-buttons">
+            <li class="filtration-button-element">
+              <button type="button" class="button filtration-button">
+                Усі
+              </button>
+            </li>
+            <li class="filtration-button-element">
+              <button type="button" class="button filtration-button">
+                Веб-сайти
+              </button>
+            </li>
+            <li class="filtration-button-element">
+              <button type="button" class="button filtration-button">
+                Додатки
+              </button>
+            </li>
+            <li class="filtration-button-element">
+              <button type="button" class="button filtration-button">
+                Дизайн
+              </button>
+            </li>
+            <li class="filtration-button-element">
+              <button type="button" class="button filtration-button">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+          <!-- Контент для фільтрації -->
+          <ul class="list content-cards">
+            <li class="content-cards-item">
+              <div class="modal">
+                <img src="./images/technology.png" alt="ноутбук" width="370" />
+                <p class="content-top-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                  nulla dignissimos sequi quaerat odit. Tempora doloribus,
+                  commodi alias ad quod, perspiciatis quo architecto
+                  necessitatibus, corporis placeat facere aliquam consectetur
+                  eos? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sunt doloremque rem qui odit enim minima, maiores nesciunt
+                  consequuntur corporis alias earum quam incidunt recusandae
+                  dolor voluptatem dignissimos? Fuga, eum aspernatur!
+                </p>
+              </div>
+              <div class="item-content">
+                <h3 class="item-content-header">Технокряк</h3>
+                <p class="item-content-description">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img
+                  src="./images/bascetball.png"
+                  alt="постер з баскетболістами"
+                  width="370"
+                />
+                <p class="content-top-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, iste nulla. Similique error laboriosam
+                  reprehenderit deleniti explicabo a aspernatur earum
+                  architecto, dolore ea quaerat, quisquam commodi sequi, magnam
+                  doloremque unde!
+                </p>
+              </div>
+
+              <div class="item-content">
+                <h3 class="item-content-header">
+                  Постер New Orlean vs Golden Star
+                </h3>
+                <p class="item-content-description">Дизайн</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img
+                  src="./images/seafood.png"
+                  alt="ресторан Seafood"
+                  width="370"
+                />
+                <p class="content-top-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur nemo laboriosam aperiam, veritatis vitae in itaque ea
+                  nesciunt omnis odit repellendus eligendi earum dolore natus
+                  praesentium, dolorem magni, dolores dicta!
+                </p>
+              </div>
+
+              <div class="item-content">
+                <h3 class="item-content-header">Ресторан Seafood</h3>
+                <p class="item-content-description">Додаток</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img src="./images/headphone.png" alt="навушники" width="370" />
+                <p class="content-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+                  corrupti? Maiores, doloribus sit voluptates inventore ipsum
+                  amet aliquid placeat fugit veniam in harum provident. Expedita
+                  eligendi eos soluta tenetur fugit!
+                </p>
+              </div>
+
+              <div class="item-content">
+                <h3 class="item-content-header">Проєкт Prime</h3>
+                <p class="item-content-description">Маркетинг</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img
+                  src="./images/boxes.png"
+                  alt="дизайни коробок"
+                  width="370"
+                />
+                <p class="content-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+                  corrupti? Maiores, doloribus sit voluptates inventore ipsum
+                  amet aliquid placeat fugit veniam in harum provident. Expedita
+                  eligendi eos soluta tenetur fugit!
+                </p>
+              </div>
+
+              <div class="item-content">
+                <h3 class="item-content-header">Проєкт Boxes</h3>
+                <p class="item-content-description">Додаток</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img
+                  src="./images/macbook.png"
+                  alt="аймак дисплей"
+                  width="370"
+                />
+                <p class="content-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+                  corrupti? Maiores, doloribus sit voluptates inventore ipsum
+                  amet aliquid placeat fugit veniam in harum provident. Expedita
+                  eligendi eos soluta tenetur fugit!
+                </p>
+              </div>
+
+              <div class="item-content">
+                <h3 class="item-content-header">Inspiration has no Borders</h3>
+                <p class="item-content-description">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img src="./images/edition.png" alt="дизайн книг" width="370" />
+                <p class="content-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+                  corrupti? Maiores, doloribus sit voluptates inventore ipsum
+                  amet aliquid placeat fugit veniam in harum provident. Expedita
+                  eligendi eos soluta tenetur fugit!
+                </p>
+              </div>
+              <!-- <a href="#"></a> -->
+
+              <div class="item-content">
+                <h3 class="item-content-header">Видання Limited Edition</h3>
+                <p class="item-content-description">Дизайн</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img
+                  src="./images/label.png"
+                  alt="реклама бренду"
+                  width="370"
+                />
+                <p class="content-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+                  corrupti? Maiores, doloribus sit voluptates inventore ipsum
+                  amet aliquid placeat fugit veniam in harum provident. Expedita
+                  eligendi eos soluta tenetur fugit!
+                </p>
+              </div>
+
+              <div class="item-content">
+                <h3 class="item-content-header">Проєкт LAB</h3>
+                <p class="item-content-description">Маркетинг</p>
+              </div>
+            </li>
+            <li class="content-cards-item">
+              <div class="modal">
+                <img
+                  src="./images/laptop.png"
+                  alt="додаток презентація"
+                  width="370"
+                />
+                <p class="content-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+                  corrupti? Maiores, doloribus sit voluptates inventore ipsum
+                  amet aliquid placeat fugit veniam in harum provident. Expedita
+                  eligendi eos soluta tenetur fugit!
+                </p>
+              </div>
+
+              <div class="item-content">
+                <h3 class="item-content-header">Growing Business</h3>
+                <p class="item-content-description">Додаток</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Шапка основного блоку, фільтрація контенту -->
+    </main>
+    <!-- Підвал сайту -->
+    <footer class="main-footer">
+      <div class="container footer-container">
+        <address class="block-address">
+          <a href="index.html" lang="en" class="logo"
+            >Web<span class="botom-logo">Studio</span></a
+          >
+          <ul class="list footer-contacts">
+            <li class="footer-contacts-item">
+              <a
+                class="footer-content address"
+                href="https://goo.gl/maps/BC4n3QJLsoe9X29g8"
+                target="_blank"
+                >м. Київ, пр-т Лесі Українки, 26</a
+              >
+            </li>
+            <li class="footer-contacts-item">
+              <a class="footer-content contact" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="footer-contacts-item">
+              <a class="footer-content contact" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </address>
+        <div class="second-addr-bc">
+          <h3 class="social-links-header">Приєднуйтесь</h3>
+
+          <ul class="social-links-container footer-contacts">
+            <li class="container-link">
+              <a class="social-link" href="https://www.instagram.com">
+                <svg class="soc-link-icon" width="20" height="20">
+                  <use
+                    href="./images/svg-labels/icons.svg#icon-instagram"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="container-link">
+              <a class="social-link" href="#">
+                <svg class="soc-link-icon" width="20" height="20">
+                  <use href="./images/svg-labels/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="container-link">
+              <a class="social-link" href="#">
+                <svg class="soc-link-icon" width="20" height="20">
+                  <use href="./images/svg-labels/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="container-link">
+              <a class="social-link" href="#">
+                <svg class="soc-link-icon" width="20" height="20">
+                  <use href="./images/svg-labels/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- ####################### subscribe ####################### -->
+        <div class="subscription">
+          <label for="EmailSubscription" class="subscription-title"
+            >Підпишіться на розсилку</label
+          >
+
+          <form class="subscription-form">
+            <input
+              type="text"
+              class="subscription-input"
+              id="EmailSubscription"
+              placeholder="E-mail"
+              required
+            />
+
+            <button class="subscription-button-box button" type="submit">
+              <label class="subscribe-label"
+                ><span>Підписатися</span>
+                <svg class="subscribe-image" width="24" height="24">
+                  <use href="./images/svg-labels/icons.svg#icon-send"></use>
+                </svg>
+              </label>
+            </button>
+          </form>
+          <!-- ######################################################### -->
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
