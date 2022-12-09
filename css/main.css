@@ -30,12 +30,12 @@ img {
 }
 
 /* -------------------- Загальні стилі кнопок -------------------- */
-.button {
+.button, .subscription-form__button {
   cursor: pointer;
   font-family: inherit;
 }
 
-.container {
+.container, .footer__container, .header__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -61,29 +61,26 @@ img {
   top: 0;
   background-color: #fff;
 }
-
-.header-container {
+.header__container {
   display: flex;
   justify-content: space-between;
 }
 
-.navigation {
+.navigation__container {
   display: flex;
 }
 
 /* -------------------- Стилі списків заголовку ---------- */
-.list-navigation {
+.navigation {
   display: flex;
   align-items: center;
   gap: 50px;
   margin-left: 90px;
 }
-
-.list-navigation-item {
+.navigation__item {
   position: relative;
 }
-
-.list-navigation .list-navigation-link {
+.navigation__link {
   display: flex;
   text-decoration: none;
   font-weight: 500;
@@ -92,22 +89,14 @@ img {
   color: var(--second-main-color);
   transition: color var(--cubic-animation);
 }
-
-.list-navigation .list-navigation-link {
-  display: flex;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--second-main-color);
-  transition: color var(--cubic-animation);
+.navigation__link:hover, .navigation__link:focus {
+  color: var(--hover-link-color, red);
 }
 
-.current.list-navigation-link {
+.current.navigation__link {
   color: var(--hover-link-color);
 }
-
-.current.list-navigation-link::after {
+.current.navigation__link::after {
   position: absolute;
   bottom: -33.5px;
   content: "";
@@ -118,19 +107,13 @@ img {
   transform: scaleX(1.1);
 }
 
-.list-navigation .list-navigation-link:hover,
-.list-navigation .list-navigation-link:focus {
-  color: var(--hover-link-color, red);
-}
-
 /* ######################################################## */
-.list-contacts {
+.contacts {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-
-.list-contacts .list-contacts-link {
+.contacts__link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -141,13 +124,10 @@ img {
   color: var(--first-main-color);
   transition: fill var(--cubic-animation), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.link-ico {
+.contacts__ico {
   fill: currentColor;
 }
-
-.list-contacts .list-contacts-link:hover,
-.list-contacts .list-contacts-link:focus {
+.contacts__link:hover, .contacts__link:focus {
   color: var(--hover-link-color, red);
   fill: var(--hover-link-color, red);
 }
@@ -163,10 +143,10 @@ img {
   letter-spacing: 0.03em;
   color: var(--logo-color);
 }
-.logo .header-logo {
+.logo__header {
   color: var(--second-main-color, #212121);
 }
-.logo .botom-logo {
+.logo__botom {
   color: var(--third-main-color, #ff4837);
 }
 
@@ -533,59 +513,17 @@ img {
   color: var(--first-main-color);
 }
 
-.main-footer {
+.footer {
   background: var(--background-block-color);
   padding: 60px 0;
 }
-
-/* ---- Контейнер якому задав загальний параметр для футера ---- */
-.footer-container {
+.footer__container {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 
-.block-address {
-  margin-right: 70px;
-}
-
-/* ------------ Загальні параметри списків футера ------------ */
-.footer-contacts {
-  margin-top: 20px;
-}
-
-.footer-contacts .footer-contacts-item {
-  /* <li> */
-  line-height: 1.72;
-  margin-bottom: 10px;
-}
-
-.footer-contacts .footer-contacts-item:last-child {
-  margin-bottom: 0;
-}
-
-.footer-contacts .footer-content {
-  text-decoration: none;
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--third-main-color);
-  transition: color var(--cubic-animation);
-}
-
-.footer-contacts .contact {
-  color: rgba(255, 255, 255, 0.6);
-  transition: color var(--cubic-animation);
-}
-
-.footer-contacts .contact:hover,
-.footer-contacts .contact:focus,
-.footer-contacts .footer-content:hover,
-.footer-contacts .footer-content:focus {
-  color: var(--hover-link-color);
-}
-
-/* ----------- Social links styles ----------- */
+/* ------------ Загальні параметри футера ------------ */
 .social-links-header {
   font-size: inherit;
   font-weight: 700;
@@ -595,37 +533,67 @@ img {
   color: var(--third-main-color);
 }
 
-.social-links-container {
+/* ---- Контейнер якому задав загальний параметр для футера ---- */
+.address {
+  margin-right: 70px;
+}
+
+/* ------------ Загальні параметри списків футера ------------ */
+.footer-contacts, .social-links {
+  margin-top: 20px;
+}
+.footer-contacts__item {
+  /* <li> */
+  line-height: 1.72;
+  margin-bottom: 10px;
+}
+.footer-contacts__item:last-child {
+  margin-bottom: 0;
+}
+.footer-contacts__content {
+  text-decoration: none;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--third-main-color);
+  transition: color var(--cubic-animation);
+}
+.footer-contacts__content .contact {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--cubic-animation);
+}
+.footer-contacts__content:hover, .footer-contacts__content:focus {
+  color: var(--hover-link-color);
+}
+
+.social-links {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-
-.social-links-container .container-link {
+.social-links__container {
   width: 44px;
   height: 44px;
 }
-
-.container-link .social-link {
+.social-links__link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.1);
   display: flex;
-  align-items: center; /* центрування по вертикалі */
-  justify-content: center; /* центрування по горизонталі */
+  align-items: center;
+  /* центрування по вертикалі */
+  justify-content: center;
+  /* центрування по горизонталі */
   color: var(--third-main-color);
   transition: background-color var(--cubic-animation);
 }
-
-.social-link .soc-link-icon {
-  fill: currentColor;
-}
-
-.container-link .social-link:hover,
-.container-link .social-link:focus {
+.social-links__link:hover, .social-links__link:focus {
   background-color: var(--hover-link-color);
+}
+.social-links__icon {
+  fill: currentColor;
 }
 
 /* ------------------- Стилі форми підписки на розсилку ------------------- */
@@ -634,25 +602,14 @@ img {
   margin-left: 90px;
 }
 
-.subscription-title {
-  /* Header */
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--third-main-color);
-}
-
-/* Block with input and button */
+/* Form-block with input and button */
 .subscription-form {
   margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
-.subscription-input {
+.subscription-form__input {
   /* input field */
   outline: none;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -669,12 +626,10 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
-.subscription-input:hover {
+.subscription-form__input:hover {
   border: 2px solid var(--hover-link-color);
 }
-
-.subscription-button-box {
+.subscription-form__button {
   /* button box */
   padding: 10px 28px;
   background-color: var(--background-button-color);
@@ -683,13 +638,11 @@ img {
   border-radius: 4px;
   transition: background-color var(--cubic-animation);
 }
-
-.subscription-button-box:hover {
+.subscription-form__button:hover {
   background-color: #188ce8;
 }
-
-.subscribe-label {
-  /* text on button */
+.subscription-form__label {
+  /* content on button */
   color: var(--third-main-color);
   display: flex;
   justify-content: center;
@@ -702,8 +655,7 @@ img {
   letter-spacing: 0.06em;
   color: var(--third-main-color);
 }
-
-.subscribe-label .subscribe-image {
+.subscription-form__label .subscription-form__image {
   fill: var(--third-main-color);
 }
 
