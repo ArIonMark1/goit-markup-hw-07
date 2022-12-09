@@ -1,4 +1,4 @@
-.top-content {
+.hero {
     margin: 0 auto;
     padding: 200px 0;
     max-width: 1600px;
@@ -8,36 +8,35 @@
         url(../images/team.jpg);
     background-repeat: no-repeat;
     background-position: center;
-}
-.top-content-tittle {
-    max-width: 695px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--third-main-color, #000);
-}
-.top-button {
-    padding: 10px 30px;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    background: var(--background-button-color, red);
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: var(--third-main-color);
-    transition: background var(--cubic-animation);
-}
-
-.top-button:hover,
-.top-button:focus {
-    background: #188ce8;
+    &__tittle {
+        max-width: 695px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--third-main-color, #000);
+    }
+    &__button {
+        padding: 10px 30px;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        background: var(--background-button-color, red);
+    
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: var(--third-main-color);
+        transition: background var(--cubic-animation);
+        &:hover,
+        &:focus {
+            background: #188ce8;
+        }
+    }
 }

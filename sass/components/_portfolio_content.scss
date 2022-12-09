@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     gap: 30px;
 }
-.content-cards-item {
+.content-cards__section {
     /* <li> */
     flex-basis: calc((100% - 60px) / 3);
     transition: box-shadow var(--cubic-animation);

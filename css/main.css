@@ -7,6 +7,7 @@
   --second-main-color: #212121;
   --third-main-color: #ffffff;
   --background-block-color: #2f303a;
+  --background-team-block: #f5f4fa;
   --cubic-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -30,7 +31,7 @@ img {
 }
 
 /* -------------------- Загальні стилі кнопок -------------------- */
-.button, .subscription-form__button {
+.button, .subscription-form__button, .filtration__button {
   cursor: pointer;
   font-family: inherit;
 }
@@ -150,7 +151,7 @@ img {
   color: var(--third-main-color, #ff4837);
 }
 
-.top-content {
+.hero {
   margin: 0 auto;
   padding: 200px 0;
   max-width: 1600px;
@@ -159,8 +160,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.top-content-tittle {
+.hero__tittle {
   max-width: 695px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -171,8 +171,7 @@ img {
   text-transform: uppercase;
   color: var(--third-main-color, #000);
 }
-
-.top-button {
+.hero__button {
   padding: 10px 30px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -187,29 +186,25 @@ img {
   color: var(--third-main-color);
   transition: background var(--cubic-animation);
 }
-
-.top-button:hover,
-.top-button:focus {
+.hero__button:hover, .hero__button:focus {
   background: #188ce8;
 }
 
-/* -------------------- Перелік особливостей компанії ---------- */
-.section {
+/* -------------------- Перелік переваг компанії ---------- */
+.preference {
   padding: 94px 0;
 }
 
-.list-info {
+.preference-list {
   display: flex;
   gap: 30px;
 }
-
-.info-card {
+.preference-list__card {
   /* <li> */
   max-width: 270px;
   flex-basis: calc((100% - 90px) / 4);
 }
-
-.info-image {
+.preference-list__image {
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -218,13 +213,11 @@ img {
   justify-content: center;
   margin-bottom: 30px;
 }
-
-.info-icon {
+.preference-list__icon {
   width: 70px;
   height: 70px;
 }
-
-.info-card-tittle {
+.preference-list__tittle {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -233,36 +226,28 @@ img {
   margin-bottom: 10px;
   color: var(--second-main-color);
 }
-
-.info-card-content {
+.preference-list__content {
   line-height: 1.72;
   color: var(--first-main-color);
 }
 
 /* -------------------- Перелік стеку компанії ---------- */
-.steck-company {
-  padding-top: 0;
-}
-
-.steck-list {
+.occupations {
   display: flex;
   gap: 30px;
 }
-
-.list-section {
+.occupations__section {
   /* <li> */
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.section-description {
+.description {
   position: relative;
 }
-
-.steck-list .list-section img {
+.description__image {
   max-width: 370px;
 }
-
-.section-text {
+.description__text {
   position: absolute;
   bottom: 0;
   height: 70px;
@@ -280,26 +265,24 @@ img {
 }
 
 /* -------------------- Дані працівників компанії ---------- */
-.team-section {
+.team {
   padding-top: 92px;
   padding-bottom: 96px;
-  background: #f5f4fa;
+  background: var(--background-team-block);
 }
 
-.team-section .team-list {
+.team-list {
   display: flex;
   gap: 30px;
 }
-
-.team-list .worker-card {
+.team-list__section {
   /* <li> */
   max-width: 270px;
   flex-basis: calc((100% - 90px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.team-list .worker-card img {
+.team-list__image {
   width: 100%;
 }
 
@@ -308,8 +291,7 @@ img {
   background: var(--third-main-color);
   border-radius: 0px 0px 4px 4px;
 }
-
-.worker-info .worker-info-header {
+.worker-info__header {
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -318,8 +300,7 @@ img {
   color: var(--second-main-color);
   margin-bottom: 10px;
 }
-
-.worker-info .worker-info-content {
+.worker-info__content {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -329,19 +310,17 @@ img {
 }
 
 /* -------------------- Стилі соціальних лінків працівників ---------- */
-.worker-soc-links {
+.social {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-
-.worker-soc-links .container-soc-link {
+.social__container {
   /* <li> */
   height: 44px;
   flex-basis: calc((100% - 30px) / 4);
 }
-
-.container-soc-link .soc-link {
+.social__link {
   display: inline-block;
   border-radius: 50%;
   width: 100%;
@@ -352,39 +331,32 @@ img {
   color: #afb1b8;
   transition: background-color var(--cubic-animation);
 }
-
-.worker-link-icon {
+.social__link:hover, .social__link:focus {
+  background-color: var(--hover-link-color);
+}
+.social__link:hover .social__icon, .social__link:focus .social__icon {
+  fill: var(--third-main-color);
+}
+.social__icon {
   fill: currentColor;
   transition: fill var(--cubic-animation);
 }
 
-.container-soc-link .soc-link:hover,
-.container-soc-link .soc-link:focus {
-  background-color: var(--hover-link-color);
-}
-
-.container-soc-link .soc-link:hover .worker-link-icon,
-.container-soc-link .soc-link:focus .worker-link-icon {
-  fill: var(--third-main-color);
-}
-
 /* -------------------- Стилі лінків клієнтів компанії  ---------- */
-.reg-customers {
+.regular-customers {
   padding: 94px 0;
 }
 
-.list-link-customers {
+.customers {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-
-.container-link-customer {
+.customers__section {
   height: 92px;
   flex-basis: calc((100% - 150px) / 6);
 }
-
-.container-link-customer .link-customer {
+.customers__link {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -395,30 +367,28 @@ img {
   border-radius: 4px;
   transition: border var(--cubic-animation);
 }
-
-.link-customer-icon {
+.customers__link:hover, .customers__link:focus {
+  border: 1px solid var(--hover-link-color);
+}
+.customers__link:hover .customers__icon, .customers__link:focus .customers__icon {
+  fill: var(--hover-link-color);
+}
+.customers__icon {
   fill: #afb1b8;
   transition: fill var(--cubic-animation);
 }
 
-.container-link-customer .link-customer:hover,
-.container-link-customer .link-customer:focus {
-  border: 1px solid var(--hover-link-color);
+.portfolio-content {
+  padding: 94px 0;
 }
 
-.container-link-customer .link-customer:hover .link-customer-icon,
-.container-link-customer .link-customer:focus .link-customer-icon {
-  fill: var(--hover-link-color);
-}
-
-.filtration-buttons {
+.filtration {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 50px;
 }
-
-.filtration-button {
+.filtration__button {
   border: none;
   background: #f5f4f4;
   border-radius: 4px;
@@ -433,9 +403,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filtration-button:hover,
-.filtration-button:focus {
+.filtration__button:hover, .filtration__button:focus {
   color: var(--third-main-color);
   background: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -448,7 +416,7 @@ img {
   gap: 30px;
 }
 
-.content-cards-item {
+.content-cards__section {
   /* <li> */
   flex-basis: calc((100% - 60px) / 3);
   transition: box-shadow var(--cubic-animation);
